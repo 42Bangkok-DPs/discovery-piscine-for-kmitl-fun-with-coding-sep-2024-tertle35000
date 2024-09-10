@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <title>Basics</title>
+    <style>
+        body {
+            background-color: pink; /* ตั้งค่าพื้นหลังสีชมพู */
+            font-family: Arial, sans-serif; /* ตั้งค่าฟอนต์ของเอกสาร */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white; /* ตั้งค่าสีตัวอักษรเป็นสีขาว */
+            text-align: center; /* จัดกึ่งกลางข้อความ */
+            font-size: 48px; /* ขนาดฟอนต์ใหญ่ */
+            margin-top: 20px;
+        }
+        .container {
+            display: flex; /* ใช้ Flexbox เพื่อจัดการตำแหน่งรูปภาพ */
+            justify-content: center; /* จัดกึ่งกลางรูปภาพใน container */
+            margin: 20px 0;
+        }
+        .container img {
+            max-width: 300px; /* ขนาดของรูปภาพไม่เกิน 45% ของความกว้าง container */
+            height: 300px; /* ปรับความสูงให้สอดคล้องกับขนาดความกว้าง */
+            margin: 0 10px; /* เพิ่มระยะห่างระหว่างรูปภาพ */
+        }
+        .links {
+            text-align: center; /* จัดกึ่งกลางลิงก์ใต้รูปภาพ */
+            margin-bottom: 20px;
+        }
+        hr {
+            border: 0;
+            border-top: 2px solid black; /* เส้นแบ่งหน้าด้วยเส้นสีดำ */
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: right; /* จัดข้อความให้ชิดขอบขวา */
+            font-style: italic; /* ตั้งค่าเป็นตัวเอียง */
+            font-family: monospace; /* ตั้งค่าเป็นฟอนต์ที่ใช้ตัวอักษรเดี่ยว */
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Basics!</h1>
+
+    <div class="container">
+        <div>
+            <img src="https://deo.shopeemobile.com/shopee/shopee-mobilemall-live-sg/homepagefe/26c9324913c021677768c36975d635ef.png" alt="Online Shop 1">
+            <div class="links">
+                <a href="https://shopee.co.th/">Visit Shop 1</a>
+            </div>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpbylsmMrJl4M65qPwepxA6TBrzAWdsDUixw&s" alt="Online Shop 2">
+            <div class="links">
+                <a href="https://www.grab.com/th/download/">Visit Shop 2</a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        © wil 2024
+    </div>
+
+   
+</body>
+</html>
