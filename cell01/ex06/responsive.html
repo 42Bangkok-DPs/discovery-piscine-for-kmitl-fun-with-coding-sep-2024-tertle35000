@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Colored Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* ตั้งค่าฟอนต์ของเอกสาร */
+            margin: 0;
+            padding: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* สีพื้นหลัง */
+        }
+        table {
+            border-collapse: collapse; /* เอาขอบตารางออก */
+            width: 100%; /* กำหนดความกว้างของตาราง */
+        }
+        td {
+            width: 50%; /* กำหนดความกว้างของแต่ละเซลล์ */
+            height: 100vh; /* กำหนดความสูงของแต่ละเซลล์ */
+            text-align: center; /* จัดข้อความให้กึ่งกลาง */
+            vertical-align: middle; /* จัดข้อความแนวตั้งให้กึ่งกลาง */
+            color: white; /* สีข้อความ */
+            font-size: 20px; /* ขนาดฟอนต์ */
+        }
+        .box1 {
+            background-color: #3498db; /* สีพื้นหลังของกล่องที่ 1 */
+            border: 0;
+            border: 2px solid black
+        }
+        .box2 {
+            background-color: #e74c3c; /* สีพื้นหลังของกล่องที่ 2 */
+            border: 0;
+            border: 2px solid black
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="box1">Blue</td>
+            <td class="box2">Red</td>
+        </tr>
+    </table>
+</body>
+</html>
