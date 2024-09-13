@@ -1,0 +1,55 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Parallax Base Styles */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* First Parallax Section */
+.parallax1 {
+    background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/11/Re-Zero.jpg'); /* Replace with your first image */
+}
+
+/* Second Parallax Section */
+.parallax2 {
+    background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/03/re-zero-subaru-in-bed.jpg'); /* Replace with your second image */
+}
+
+/* Centered Message Styling */
+.centered-message h1 {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Content Section Styling */
+.content-section {
+    height: 50vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-section h2, .content-section p {
+    margin: 0;
+}
