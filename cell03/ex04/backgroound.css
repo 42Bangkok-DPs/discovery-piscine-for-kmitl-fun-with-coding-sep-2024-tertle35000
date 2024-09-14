@@ -1,0 +1,29 @@
+/* General Styling for Page */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Default background color */
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #979797;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: auto;
+}
+
+button:hover {
+    background-color: #000000;
+}

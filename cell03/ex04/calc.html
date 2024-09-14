@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], select {
+            width: calc(30% - 10px);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        select {
+            width: 20%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+    </style>
+    <!-- Import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h1>Simple Calculator</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <input type="text" id="a" name="a" placeholder="First Number">
+                <select name="op" id="op">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <input type="text" id="b" name="b" placeholder="Second Number">
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#calculatorForm').on('submit', function(e) {
+                e.preventDefault(); // ป้องกันการรีเฟรชหน้า
+                let message = "Error :(";
+                let a = $('#a').val();
+                let b = $('#b').val();
+                let op = $('#op').val();
+
+                if (a.includes(".") || b.includes(".")) {
+                    console.log(message);
+                    alert(message);
+                    return;
+                }
+
+                a = parseInt(a);
+                b = parseInt(b);
+
+                if (isNaN(a) || isNaN(b) || a < 0 || b < 0) {
+                    message = "Error :(";
+                } else if ((op === "%" || op === "/") && b === 0) {
+                    message = "It’s over 9000!";
+                } else {
+                    switch (op) {
+                        case "+": message = a + b; break;
+                        case "-": message = a - b; break;
+                        case "*": message = a * b; break;
+                        case "/": message = a / b; break;
+                        case "%": message = a % b; break;
+                        default: message = "Error :(";
+                    }
+                }
+
+                console.log(message);
+                alert(message);
+            });
+
+            // แสดงข้อความเตือนทุกๆ 30 วินาที
+            setInterval(() => alert("Please, use me..."), 30000);
+        });
+    </script>
+</body>
+</html>
